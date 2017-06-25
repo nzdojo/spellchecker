@@ -4,10 +4,19 @@ var assert = require('assert');
 var SpellChecker = require('./spellChecker');
 
 describe("Spell Checker Tests", function () {
+    
+    var words;
+    
+    //1. Module Setup
+    
+    before(function () {
+        // Words is a Shared Fixture for all tests, needed only once
+        words = ["nick"]; 
+    });
 
     it('An empty string is a string that is spelt correctly (in our world)', function (done) {
         // 1. Setup
-        var spellChecker = new SpellChecker();
+        var spellChecker = new SpellChecker(words);
         
         // 2. Exercise
         var isSpeltCorrectly = spellChecker.check('');
@@ -21,7 +30,7 @@ describe("Spell Checker Tests", function () {
     
     it('A null is spelt correctly (in our world)', function (done) {
         // 1. Setup
-        var spellChecker = new SpellChecker();
+        var spellChecker = new SpellChecker(words);
         
         // 2. Exercise
         var isSpeltCorrectly = spellChecker.check(null);
@@ -35,7 +44,7 @@ describe("Spell Checker Tests", function () {
     
     it('A word is spelt correctly', function (done) {
         // 1. Setup
-        var spellChecker = new SpellChecker();
+        var spellChecker = new SpellChecker(words);
         
         // 2. Exercise
         var isSpeltCorrectly = spellChecker.check('nick');
@@ -49,7 +58,7 @@ describe("Spell Checker Tests", function () {
     
     it('A word is spelt incorrectly', function (done) {
         // 1. Setup
-        var spellChecker = new SpellChecker();
+        var spellChecker = new SpellChecker(words);
         
         // 2. Exercise
         var isNotSpeltCorrectly = spellChecker.check('@@@@');

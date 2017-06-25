@@ -1,11 +1,12 @@
 var SpellChecker = (function () {
     
-    function SpellChecker() {
+    function SpellChecker(words) {
+        this.words = words;
     }
     
     SpellChecker.prototype.check = function (toCheck) {
         if (toCheck) {
-            return ['nick'].indexOf(toCheck) > -1;
+            return this.words.indexOf(toCheck) > -1;
         }
         else {
             return true;
