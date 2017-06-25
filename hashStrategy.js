@@ -4,9 +4,9 @@ var HashStrategy = (function () {
     function HashStrategy(words) {
     }
     
-    HashStrategy.prototype.hash = function (toHash) {
+    HashStrategy.prototype.hashIndices = function (toHash) {
         if (!toHash) 
-            return 0;
+            return [0, 0, 0];
     };
     
     return HashStrategy;

@@ -14,13 +14,14 @@ describe("Hash Strategy Tests", function () {
         var hashStrategy = new HashStrategy();
         
         // 2. Exercise
-        var hashedValue = hashStrategy.hash('');
+        var hashedValue = hashStrategy.hashIndices('');
         
         // 3. Verify
-        assert(hashedValue === 0, 'An empty string hashes to zero');
+        assert(hashedValue[0] + hashedValue[1] + hashedValue[2]  === 0, 'An empty string hashes to all zeroes');
         
         // 4. Cleanup & Finish
         done();
     });
+    
 
 });
