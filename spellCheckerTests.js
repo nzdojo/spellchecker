@@ -22,7 +22,12 @@ describe("Spell Checker Tests", function () {
     });
     
     // 2. Module Exercise
-
+    
+    it('Construction creates the hashset of words', function (done) {
+        assert(false, 'To be implemented');
+        done();
+    });
+    
     it('An empty string is a string that is spelt correctly (in our world)', function (done) {
         // 1. Setup
         
