@@ -5,7 +5,7 @@ var SpellChecker = (function () {
     
     SpellChecker.prototype.check = function (toCheck) {
         if (toCheck) {
-            return false;
+            return ['nick'].indexOf(toCheck);
         }
         else {
             return true;
