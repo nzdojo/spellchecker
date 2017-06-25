@@ -10,6 +10,7 @@ describe("Spell Checker Tests", function () {
     
     //1. Module Setup
     
+    // Shared Fixture
     before(function () {
         // Words is a Shared Fixture for all tests, needed only once
         words = ["nick", "first", "coffee", "speaker", "allergy", "spouse", "demonination", "it", "pillowcase", "pillow", "snick"]; 
