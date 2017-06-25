@@ -45,6 +45,20 @@ describe("Spell Checker Tests", function () {
         
         // 4. Cleanup & Finish
         done();
-    });    
+    });   
+    
+    it('A word is spelt incorrectly', function (done) {
+        // 1. Setup
+        var spellChecker = new SpellChecker();
+        
+        // 2. Exercise
+        var isNotSpeltCorrectly = spellChecker.check('@@@@');
+        
+        // 3. Verify
+        assert(!isNotSpeltCorrectly, 'The word is incorrect, yet it was returned as correct');
+        
+        // 4. Cleanup & Finish
+        done();
+    });  
 
 });
