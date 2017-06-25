@@ -5,7 +5,8 @@ var SpellChecker = require('./spellChecker');
 
 describe("Spell Checker Tests", function () {
     
-    var words;
+    var words,
+        spellChecker;
     
     //1. Module Setup
     
@@ -13,6 +14,13 @@ describe("Spell Checker Tests", function () {
         // Words is a Shared Fixture for all tests, needed only once
         words = ["nick"]; 
     });
+    
+    // Fresh Fixture per test.  
+    beforeEach(function () {
+        spellChecker = new SpellChecker(words);
+    });
+    
+    // 2. Module Exercise
 
     it('An empty string is a string that is spelt correctly (in our world)', function (done) {
         // 1. Setup
