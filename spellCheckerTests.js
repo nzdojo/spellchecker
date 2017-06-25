@@ -19,7 +19,7 @@ describe("Spell Checker Tests", function () {
         done();
     });
     
-    it('An null is spelt correctly (in our world)', function (done) {
+    it('A null is spelt correctly (in our world)', function (done) {
         // 1. Setup
         var spellChecker = new SpellChecker();
         
@@ -33,5 +33,18 @@ describe("Spell Checker Tests", function () {
         done();
     });
     
+    it('A word is spelt correctly', function (done) {
+        // 1. Setup
+        var spellChecker = new SpellChecker();
+        
+        // 2. Exercise
+        var isSpeltCorrectly = spellChecker.check('nick');
+        
+        // 3. Verify
+        assert(isSpeltCorrectly, 'A null is in fact spelt correctly');
+        
+        // 4. Cleanup & Finish
+        done();
+    });    
 
 });
