@@ -25,7 +25,7 @@ describe("Spell Checker Tests", function () {
     
     it('Construction creates the hashset of words', function (done) {
         // 3. Verify
-        assert(spellChecker.dictionaryLength, 'We passed in words so therefore is should have words in it');
+        assert(!spellChecker.isDictionaryEmpty, 'We passed in words so therefore is should have words in it');
         
         // 4. Cleanup & Finish
         done();

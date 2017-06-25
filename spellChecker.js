@@ -13,9 +13,9 @@ var SpellChecker = (function () {
         }
     };
     
-    SpellChecker.prototype.dictionaryLength = function () {
-        return this.words.length();
-    }
+    this.isDictionaryEmpty = function () {
+        return this.words.length> 0;
+    };
     
     return SpellChecker;
     
