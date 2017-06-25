@@ -12,7 +12,7 @@ describe("Spell Checker Tests", function () {
     
     before(function () {
         // Words is a Shared Fixture for all tests, needed only once
-        words = ["nick"]; 
+        words = ["nick", "first", "coffee", "speaker", "allergy", "spouse", "demonination", "it", "pillowcase", "pillow", "snick"]; 
     });
     
     // Fresh Fixture per test.  
