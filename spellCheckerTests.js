@@ -24,7 +24,10 @@ describe("Spell Checker Tests", function () {
     // 2. Module Exercise
     
     it('Construction creates the hashset of words', function (done) {
-        assert(false, 'To be implemented');
+        // 3. Verify
+        assert(spellChecker.dictionaryLength, 'We passed in words so therefore is should have words in it');
+        
+        // 4. Cleanup & Finish
         done();
     });
     

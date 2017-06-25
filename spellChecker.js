@@ -13,6 +13,10 @@ var SpellChecker = (function () {
         }
     };
     
+    SpellChecker.prototype.dictionaryLength = function () {
+        return this.words.length();
+    }
+    
     return SpellChecker;
     
 }());
