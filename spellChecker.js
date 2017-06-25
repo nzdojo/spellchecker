@@ -1,7 +1,10 @@
+var BitSet = require("bitset.js");
+
 var SpellChecker = (function () {
     
     function SpellChecker(words) {
         this.words = words;
+        this.bs = new BitSet();
     }
     
     SpellChecker.prototype.check = function (toCheck) {
