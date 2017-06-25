@@ -24,7 +24,7 @@ describe("Spell Checker Tests", function () {
         var spellChecker = new SpellChecker();
         
         // 2. Exercise
-        var isSpeltCorrectly = spellChecker.check();
+        var isSpeltCorrectly = spellChecker.check(null);
         
         // 3. Verify
         assert(isSpeltCorrectly, 'A null is in fact spelt correctly');
@@ -41,7 +41,7 @@ describe("Spell Checker Tests", function () {
         var isSpeltCorrectly = spellChecker.check('nick');
         
         // 3. Verify
-        assert(isSpeltCorrectly, 'A null is in fact spelt correctly');
+        assert(isSpeltCorrectly, 'The word is correct');
         
         // 4. Cleanup & Finish
         done();
