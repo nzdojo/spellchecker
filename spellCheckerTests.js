@@ -61,6 +61,19 @@ describe("Spell Checker Tests", function () {
         done();
     });   
     
+    it('A word is spelt correctly, case insensitive', function (done) {
+        // 1. Setup
+        
+        // 2. Exercise
+        var isSpeltCorrectly = spellChecker.check('Nick');
+        
+        // 3. Verify
+        assert(isSpeltCorrectly, 'The word is correct');
+        
+        // 4. Cleanup & Finish
+        done();
+    }); 
+    
     it('A word is spelt incorrectly', function (done) {
         // 1. Setup
         
