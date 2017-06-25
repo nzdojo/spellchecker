@@ -41,4 +41,22 @@ describe("Hash Strategy Tests", function () {
         done();
     });
     
+    it('Hashing another word twice, hashes to the same indices.', function (done) {
+        // 1. Setup
+        var hashStrategy = new HashStrategy();
+        var wordToHash = 'incredible';
+        
+        // 2. Exercise
+        var firstHashedValue = hashStrategy.hashIndices(wordToHash);
+        var secondHashedValue = hashStrategy.hashIndices(wordToHash);
+        
+        // 3. Verify
+        assert(firstHashedValue[0] === secondHashedValue[0], 'Expecting the same hash value, at first index');
+        assert(firstHashedValue[1] === secondHashedValue[1], 'Expecting the same hash value, at second index');
+        assert(firstHashedValue[2] === secondHashedValue[2], 'Expecting the same hash value, at third index');
+        
+        // 4. Cleanup & Finish
+        done();
+    });
+    
 });

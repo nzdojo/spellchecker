@@ -4,6 +4,7 @@
   "description": "Demonstrates fast and almost perfect spell checking with a bloom filter",
   "author": "Nick Zdunic <n_zdunic@yahoo.com.au>",
   "dependencies": {
-    "bitset.js": "^4.0.1"
+    "bitset.js": "^4.0.1",
+    "md5-hex": "^2.0.0"
   }
 }
