@@ -1,6 +1,7 @@
 "use strict";
 
 var assert = require('assert'); 
+var HashStrategy = require("./hashStrategy");
 
 describe("Hash Strategy Tests", function () {
     
@@ -10,6 +11,7 @@ describe("Hash Strategy Tests", function () {
 
     it('Empty string hashes to zero', function (done) {
         // 1. Setup
+        var hashStrategy = new HashStrategy();
         
         // 2. Exercise
         var hashedValue = hashStrategy.hash('');
