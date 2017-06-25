@@ -1,7 +1,9 @@
 {
-  "name": "Spell Checker with a Bloom Filter",
+  "name": "SpellChecker",
   "version": "0.0.0",
   "description": "Demonstrates fast and almost perfect spell checking with a bloom filter",
   "author": "Nick Zdunic <n_zdunic@yahoo.com.au>",
-  "dependencies": {}
+  "dependencies": {
+    "bitset.js": "^4.0.1"
+  }
 }
