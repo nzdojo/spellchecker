@@ -4,7 +4,12 @@ var SpellChecker = (function () {
     }
     
     SpellChecker.prototype.check = function (toCheck) {
-        return toCheck === '1';
+        if (toCheck) {
+            return false;
+        }
+        else {
+            return true;
+        }
     };
     
     return SpellChecker;
