@@ -1,6 +1,7 @@
 "use strict";
 
 var assert = require('assert'); 
+var async = require('async');
 var SpellChecker = require('./spellChecker');
 
 // Potential to divide this up into Testcase Class per TestFixture.  It could get big nd unwieldy
@@ -135,6 +136,22 @@ describe("Spell Checker Tests", function () {
         
         // 4. Cleanup & Finish
         done();
+    });
+    
+    async.each(['xxxx', '!!dd', 'superfreak'], function (wordToCheck, asyncdone) {
+        it('These words should not be found. Word ' + wordToCheck, function (done) {
+            // 1. Setup
+            
+            // 2. Exercise
+            var notFound = spellChecker.check(wordToCheck);
+            
+            // 3. Verify
+            assert(!notFound, wordToCheck + ' was found in the spellChecker');
+            
+            // 4. Cleanup & Finish
+            done();
+        });
+        asyncdone();
     });
 
 });
