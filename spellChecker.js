@@ -4,6 +4,12 @@ var HashStrategy = require('./hashStrategy');
 function SpellChecker(words) {
     this.hashSetAllWords = new BitSet;
     this.hashStrategy = new HashStrategy();
+    for (var i = words.length - 1; i >= 0; i--) {
+        var hashIndices = this.hashStrategy.hashIndices(words[i].toLowerCase());
+        for (var j = 0; j < hashIndices.length; j++) {
+            this.hashSetAllWords.set(hashIndices[j], 1);   
+        }
+    }    
 }
 
 SpellChecker.prototype.check = function (toCheck) {
@@ -16,7 +22,7 @@ SpellChecker.prototype.check = function (toCheck) {
 };
     
 SpellChecker.prototype.isDictionaryEmpty = function () {
-    return this.words.length < 1;
+    return this.hashSetAllWords.isEmpty();
 };
     
 module.exports = SpellChecker;
