@@ -3,6 +3,8 @@
 var assert = require('assert'); 
 var SpellChecker = require('./spellChecker');
 
+// Potential to divide this up into Testcase Class per TestFixture.  It could get big nd unwieldy
+
 describe("Spell Checker Tests", function () {
     
     var words,
