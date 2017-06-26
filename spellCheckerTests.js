@@ -13,7 +13,7 @@ describe("Spell Checker Tests", function () {
     // Shared Fixture
     before(function () {
         // Words is a Shared Fixture for all tests, needed only once
-        words = ["nick", "first", "coffee", "speaker", "allergy", "spouse", "demonination", "it", "pillowcase", "pillow", "snick"]; 
+        words = ["nick", "first", "coffee", "speaker", "allergy", "spouse", "demonination", "it", "pillowcase", "pillow", "snick", "Sauces'"]; 
     });
     
     // Fresh Fixture per test.  
@@ -121,5 +121,18 @@ describe("Spell Checker Tests", function () {
         // 4. Cleanup & Finish
         done();
     }); 
+    
+    it('A word with mixed case and unusual characters', function (done) {
+        // 1. Setup
+        
+        // 2. Exercise
+        var isSpeltCorrectly = spellChecker.check("Sauces'");
+        
+        // 3. Verify
+        assert(isSpeltCorrectly, 'The word is correct');
+        
+        // 4. Cleanup & Finish
+        done();
+    });
 
 });
